@@ -321,24 +321,19 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
 
 #else
 
-- (NSImage *)imageFromCurrentFramebuffer;
-{
-    return [self imageFromCurrentFramebufferWithOrientation:UIImageOrientationLeft];
-}
-
-- (NSImage *)imageFromCurrentFramebufferWithOrientation:(UIImageOrientation)imageOrientation;
+- (UIImage *)imageFromCurrentFramebufferWithOrientation:(UIImageOrientation)imageOrientation;
 {
     CGImageRef cgImageFromBytes = [self newCGImageFromCurrentlyProcessedOutput];
-    NSImage *finalImage = [[NSImage alloc] initWithCGImage:cgImageFromBytes size:NSZeroSize];
+    UIImage *finalImage = [UIImage imageWithCGImage:cgImageFromBytes scale:1.0 orientation:imageOrientation];
     CGImageRelease(cgImageFromBytes);
     
     return finalImage;
 }
 
-- (NSImage *)imageByFilteringImage:(NSImage *)imageToFilter;
+- (UIImage *)imageByFilteringImage:(UIImage *)imageToFilter;
 {
-    CGImageRef image = [self newCGImageByFilteringCGImage:[imageToFilter CGImageForProposedRect:NULL context:[NSGraphicsContext currentContext] hints:nil]];
-    NSImage *processedImage = [[NSImage alloc] initWithCGImage:image size:NSZeroSize];
+    CGImageRef image = [self newCGImageByFilteringCGImage:[imageToFilter CGImage]];
+    UIImage *processedImage = [UIImage imageWithCGImage:image scale:[imageToFilter scale] orientation:[imageToFilter imageOrientation]];
     CGImageRelease(image);
     return processedImage;
 }

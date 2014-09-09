@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630EA44519BF61BA002DC3F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630EA44419BF61BA002DC3F8 /* UIKit.framework */; };
 		A87E5E12177648F3007FD5B1 /* GPUImageRawDataOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = A87E5E10177648F3007FD5B1 /* GPUImageRawDataOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A87E5E13177648F3007FD5B1 /* GPUImageRawDataOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = A87E5E11177648F3007FD5B1 /* GPUImageRawDataOutput.m */; };
 		A87E5E1617764B16007FD5B1 /* GPUImageRawDataInput.h in Headers */ = {isa = PBXBuildFile; fileRef = A87E5E1417764B16007FD5B1 /* GPUImageRawDataInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -318,6 +319,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630EA44419BF61BA002DC3F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = "../../../../../../../Library/Developer/Xcode/DerivedData/Anyline-btlioxskudgatjfzzzehaexubvjf/Build/Products/Debug/UIKit.framework"; sourceTree = "<group>"; };
 		A87E5E10177648F3007FD5B1 /* GPUImageRawDataOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageRawDataOutput.h; path = Source/GPUImageRawDataOutput.h; sourceTree = SOURCE_ROOT; };
 		A87E5E11177648F3007FD5B1 /* GPUImageRawDataOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageRawDataOutput.m; path = Source/GPUImageRawDataOutput.m; sourceTree = SOURCE_ROOT; };
 		A87E5E1417764B16007FD5B1 /* GPUImageRawDataInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageRawDataInput.h; path = Source/GPUImageRawDataInput.h; sourceTree = SOURCE_ROOT; };
@@ -639,6 +641,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630EA44519BF61BA002DC3F8 /* UIKit.framework in Frameworks */,
 				BCF8675D1725BBE900912E34 /* CoreMedia.framework in Frameworks */,
 				BCF8675B1725BBE300912E34 /* AVFoundation.framework in Frameworks */,
 				BCA3F3621723A8FA00E28AEC /* OpenGL.framework in Frameworks */,
@@ -670,6 +673,7 @@
 		BCA3F31E17239B6500E28AEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				630EA44419BF61BA002DC3F8 /* UIKit.framework */,
 				BCA3F31F17239B6500E28AEC /* Cocoa.framework */,
 				BCA3F3601723A8FA00E28AEC /* OpenGL.framework */,
 				BCA3F3611723A8FA00E28AEC /* QuartzCore.framework */,
@@ -1512,6 +1516,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Anyline-btlioxskudgatjfzzzehaexubvjf/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Mac/GPUImageMac-Prefix.pch";
@@ -1527,6 +1535,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Anyline-btlioxskudgatjfzzzehaexubvjf/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Mac/GPUImageMac-Prefix.pch";
